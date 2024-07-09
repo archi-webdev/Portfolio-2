@@ -14,13 +14,10 @@ if(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matche
 if(localStorage.getItem('darkMode') === 'dark') {
     btnDarkMode.classList.add('activity');
     document.body.classList.add('dark');
-}  
-
-
-// else if(localStorage.setItem('darkMode') === 'light') {
-//     btnDarkMode.classList.add('"activity');
-//     document.body.classList.add('dark');
-// }
+}  else if(localStorage.getItem('darkMode') === 'light') {
+    btnDarkMode.classList.remove('"activity');
+    document.body.classList.remove('dark');
+}
 
 // проверка на уровне системных настроек 
 
